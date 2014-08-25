@@ -1,7 +1,7 @@
 {
   "name": "riki-server",
   "description": "A nodejs server for riki",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/shash7/riki-server",
   "author": {
     "name": "shash7",
@@ -25,4 +25,7 @@
     "node": "0.8"
   },
   "keywords": [],
+  "dependencies": {
+    "moment": "^2.8.2"
+  }
 }
