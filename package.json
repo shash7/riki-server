@@ -26,6 +26,8 @@
   },
   "keywords": [],
   "dependencies": {
-    "moment": "^2.8.2"
+    "moment": "^2.8.2",
+    "node-uuid": "^1.4.1",
+    "underscore": "^1.6.0"
   }
 }
