@@ -1,0 +1,132 @@
+// main: app.less
+
+/* ----------------------------------------------------------------
+ * components.less
+ * 
+ * Site components like header, footer, etc as well as generic components like message, container, etc come in here
+ * 
+ * Menu :
+ * 	imports
+ * 	header
+ * 	body
+ * 	avatar
+ * ---------------------------------------------------------------- */
+
+/*
+ * $imports
+ */
+@import 'colors.less';
+@import 'typography.less';
+@import 'z-index.less';
+
+
+/*
+ * $header
+ */
+.site-header {
+	position: fixed;
+	top:0;
+	width:100%;
+	border-bottom:@border-light-color solid 1px;
+	background-color: @header-color;
+	
+	box-shadow: 0 1px 2px 1px rgba(0,0,0,0.2);
+}
+
+.site-nav {
+	width:70%;
+	margin:0 auto;
+}
+
+.site-nav-item {
+	display: inline-block;
+	float: right;
+	height:48px;
+	padding: 2px 18px;
+	box-sizing: border-box;
+	border-right: @border-light-color solid 1px;
+	
+	color:#FFF;
+	font-size: 0.9em;
+	line-height: 2.6;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+
+	cursor: pointer;
+}
+
+.site-nav-item:hover {
+	background-color: rgba(0,0,0,0.1);
+}
+.site-nav-item:active {
+	background-color: rgba(0,0,0,0.2);
+}
+.site-nav-item:first-child {
+	border-right-style: none;
+}
+.site-nav-item:last-child {
+	border-left: @border-light-color solid 1px;
+}
+
+.site-title.site-nav-item {
+	float: left;
+	width:30%;
+	margin: 0;
+	
+	color:#FFF;
+	font-size: 36px;
+	line-height: 1.2;
+}
+
+
+/*
+ * $body
+ */
+.site-body {
+	width:70%;
+	margin: 0 auto;
+}
+
+.site-body-container {
+	padding: 32px;
+	box-sizing: border-box;
+}
+
+.container {
+	padding: 48px 16px;
+	border:rgba(0,0,0,0.1) solid 1px;
+	border-radius: 3px;
+	background-color: @container-color;
+}
+
+.clearfix:after {
+	display: block;
+	clear: both;
+	content : '';
+}
+
+/*
+ * $message
+ */
+.message {
+	padding: 8px;
+	
+	border:@border-light-color solid 1px;
+	border-radius: 3px;
+	
+	background-color: @container-color;
+}
+
+.message-author-name {
+	vertical-align: super;
+}
+
+/*
+ * $avatar
+ */
+.avatar {
+	display: inline-block;
+	width:32px;
+	height:32px;
+	border-radius: 3px;
+}

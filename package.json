@@ -26,6 +26,7 @@
   },
   "keywords": [],
   "dependencies": {
+    "handlebars": "^2.0.0",
     "mime": "^1.2.11",
     "moment": "^2.8.2",
     "node-uuid": "^1.4.1",

@@ -18,9 +18,9 @@
 	socket.start();
 	
 	if(config.http) {
-		var server = require('./lib/server.js');
+		var routes = require('./lib/routes.js');
 		
-		server.start();
+		routes.start();
 	}
 
 })();

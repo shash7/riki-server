@@ -14,8 +14,6 @@
 	'use strict';
 	
 	function init() {
-		var all = document.getElementsByTagName('h1')[0];
-		all.style.color = '#f30';
 	}
 	
 	init();
