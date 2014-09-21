@@ -1,0 +1,46 @@
+
+<header class="site-header clearfix">
+	<nav class="site-nav clearfix">
+		<h1 class="site-title site-nav-item">
+			<a href="/">
+				Chorizo
+			</a>
+		</h1>
+		
+		{{#if logged}}
+		<span class="site-nav-item">
+			<a href="/logout">
+				Logout
+			</a>
+		</span>
+		<span class="site-nav-item">
+			<img class="site-nav-profile site-nav-avatar" src="http://www.gravatar.com/avatar/{{avatar.avatarEncode}}?s=30&d=identicon" >
+			<a href="/profile/{{name}}" class="site-nav-profile">
+				{{name}}
+			</a>
+		</span>
+		<span class="site-nav-item">
+			<a href="/profile/{{name}}/notifications">
+			<span class="icon-drawer"></span>
+			</a>
+		</span>
+		<span class="site-nav-item">
+			<a href="#" data-action="post">
+				Post
+			</a>
+		</span>
+		
+		{{else}}
+		<span class="site-nav-item">
+			<a href="#" data-action="login">
+				Login
+			</a>
+		</span>
+		<span class="site-nav-item">
+			<a href="#" data-action="signup">
+				Signup
+			</a>
+		</span>
+		{{/if}}
+	</nav>
+</header>

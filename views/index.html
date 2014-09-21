@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta charset="utf-8">
+		
 		<link rel="stylesheet" href="css/app.css">
+		
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/handlebars-v2.0.0.js"></script>
+		<script src="js/modal.js"></script>
+		{{#if logged}}
+			<script src="js/droplr.js"></script>
+  	{{/if}}
 	</head>
 
 	<body>
 		
 		<!-- Header -->
-		<header class="site-header clearfix">
-			<nav class="site-nav clearfix">
-				<h1 class="site-title site-nav-item">
-				Chorizo
-				</h1>
-				<span class="site-nav-item">
-					<a href="/about">
-						About
-					</a>
-				</span>
-			</nav>
-		</header>
+		{{> header}}
 		
 		<!-- Body -->
 		<div class="site-body">
@@ -57,19 +55,28 @@
 				
 				<!-- Sidebar -->
 				<aside class="col-4 last">
-					<h3>Login</h3>
-					<form action="/login" method="post">
-						<label>Email</label>
-						<input type="text" name="email" placeholder="name@provider.com">
-						<label>Password</label>
-						<input type="password" name="password" placeholder="********">
-						<input type="submit" value="Login">
-					</form>
 				</aside>
 				
 			</div>
 		</div>
+		
+		<!-- Templates -->
+		{{#if logged}}
+			{{> post}}
+		{{else}}
+			{{> login-signup}}
+		{{/if}}
+		<!-- Templates END -->
+		
 		<!-- Main script -->
-		<script src="js/app.js"></script>
+		{{#if logged}}
+			<script type="text/javascript">
+				var personName = {{name}}
+			</script>
+			<script src="js/app-logged.js"></script>
+		{{else}}
+			<script src="js/app.js"></script>
+		{{/if}}
+		
 	</body>
 </html>

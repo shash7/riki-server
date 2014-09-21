@@ -12,21 +12,21 @@
 @import 'colors.less';
 @import 'typography.less';
 
-input {
+
+// Resets inputs across browsers
+input, textarea, button {
+	display: inline-block;
 	font-family: 'Helvetica Neue', 'Lucida Sans Unicode';
 	border:none;
+	width:100%;
+	height:auto;
+	box-sizing: border-box;
+	margin: 4px 0;
 }
 
-input[type="button"], input[type="submit"] {
+input[type="button"], input[type="submit"], button {
 	display: inline-block;
 	padding: 4px 14px;
-	margin: 2px;
-	
-	color:rgba(255,255,255,0.9);
-	background-color: @positive;
-	
-	border:@border-color solid 1px;
-	border-radius: 3px;
 	
 	color:#FFF;
 	background-color: #3498DB;
@@ -35,16 +35,44 @@ input[type="button"], input[type="submit"] {
 	background-clip: padding-box;
 }
 
-input[type="button"]:hover, input[type="submit"]:hover {
+input[type="button"]:hover, input[type="submit"]:hover, button:hover {
 	border-color: @button-dark;
 }
 
-input[type="button"]:active, input[type="submit"]:active {
+input[type="button"]:active, input[type="submit"]:active, button:active {
 	border-color: @button-dark;
 	background-color: @button-dark;
 }
 
-input[type="button"]:focus, input[type="submit"]:focus {
+input[type="button"]:focus, input[type="submit"]:focus, button:focus {
 	outline: none;
 	border-color: @focus;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+	padding: 4px 14px;
+	border:@border-light-color solid 2px;
+	border-radius: 3px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+	outline: none;
+	border-color: @focus;
+}
+
+textarea {
+	padding: 4px 14px;
+	border:@border-light-color solid 2px;
+	border-radius: 3px;
+}
+
+textarea:focus {
+	outline: none;
+	border-color: @focus;
+}
+
+label {
+	display: inline-block;
+	margin-top: 6px;
+	font-size: @text-size;
 }
